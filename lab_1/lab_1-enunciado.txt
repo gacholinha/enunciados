@@ -1,0 +1,55 @@
+Primeiro: Assistir a revisão de tópicos de modalidades de serviços na Nuvem e sequencialmente, seguir os passos na playlist:
+
+ - https://www.youtube.com/playlist?list=PLkRpfMDXgK1OC3H6EPEIuLtW31srjFmIp
+
+
+1 - Criar uma conta no github com e-mail da escola.
+    - Acessar: https://github.com/
+    - Cadastre uma conta (caso ainda não tenha), utilizando o e-mail de dominio etec.
+    - Se deu tudo certo agora vc tem a visão do dashboard do github
+
+2 - Criar o repositório chamado aulas-segundo-info-etec
+
+- No Dashboard do github clicar em create repository
+  Observação: repare que o nome do repositorio vai conter o nome do user que vc criou no passo anterior, e como cada usuario é unico, seu repositório, consequentemente terá um nome unico
+- Preencha os campos com as seguintes informações:
+    - Repository name: aulas-segundo-info-etec
+    - Description: Repositório para gerenciar códigos da disciplina de Computacao em nuvem
+    - Selecione Private
+    - Selecione a opção "Add a README file"
+    - Clique no botão verde create respository
+    - Adicione o usuario profrafalourenco
+
+3 - Criar um arquivo de instrução do Docker.
+    - Acessar Github Codespace em https://github.com/codespaces
+    - Selecionar e configurar o projeto que criamos no passo anterior
+    - Colar Criar um Arquivo chamado "Dockerfile"
+
+    - Colar o seguinte conteudo no arquivo e depois salvar:
+
+        # Camada 1: Define a imagem base
+        FROM python:3.10-slim
+
+        # Camada 2: Define o diretório de trabalho dentro do container
+        WORKDIR /app
+
+        # Camada 3: Copia os arquivos locais para o container
+        COPY . .
+
+        # Camada 4: Instala as dependências
+        RUN pip install --no-cache-dir -r requirements.txt
+
+        # Camada 5: Define o comando padrão para rodar o app
+        CMD ["python", "main.py"]    
+
+
+4 - Verisonar um Arquivo de exemplo depois de validar a sua execução.
+    - Acessar o terminal do CodeSpace 
+    - Digitar os comandos nessa sequencia:
+      - git add Dockerfile
+      - git commit -m "Meu primeiro commit"
+      - git push origin main
+
+    OBS: usar o comando git status para visualizar o arquivo que foi criado.
+
+Qualquer duvida ou dificuldade encaminhe para o e-mail rafael.costa313@etec.sp.gov.br, Será um prazer te ajudar.
