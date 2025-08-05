@@ -124,3 +124,14 @@ No diretório target_nginx/:
 docker-compose down
 ```
 Isso garante que seu ambiente Docker fique limpo.
+
+
+Para instalar o Docker localmente ...
+```bash
+wsl --install
+```
+e Depois ...
+
+```bash
+Invoke-WebRequest -Uri "https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe" -OutFile "$env:USERPROFILE\Downloads\DockerDesktopInstaller.exe"
+```
