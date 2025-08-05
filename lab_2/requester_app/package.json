@@ -1,0 +1,12 @@
+{
+  "name": "requester-app",
+  "version": "1.0.0",
+  "description": "Simple request loop application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.2"
+  }
+}

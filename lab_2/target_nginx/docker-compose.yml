@@ -1,0 +1,13 @@
+services:
+  nginx-target:
+    image: nginx:alpine
+    container_name: nginx-target-server
+    volumes:
+      # Mapeia o nosso arquivo html para dentro do container
+      - ./nginx/html:/usr/share/nginx/html:ro
+    deploy:
+      resources:
+        limits:
+          # Limita o consumo de memória a 128 Megabytes
+          memory: 7M
+    network_mode: "host"

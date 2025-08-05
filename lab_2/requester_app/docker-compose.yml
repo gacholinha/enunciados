@@ -1,0 +1,21 @@
+services:
+  requester-app:
+    build: .
+    container_name: requester-client
+    environment:
+      # O DNS aqui é o nome do container do NGINX.
+      # Docker Compose cria uma rede e resolve esses nomes automaticamente.
+      - TARGET_DNS=http://localhost
+      # N - O número de requests por segundo
+      - REQUESTS_PER_SECOND=10000000
+    network_mode: "host"
+  requester-app-2:
+    build: .
+    container_name: requester-client-2
+    environment:
+      # O DNS aqui é o nome do container do NGINX.
+      # Docker Compose cria uma rede e resolve esses nomes automaticamente.
+      - TARGET_DNS=http://localhost
+      # N - O número de requests por segundo
+      - REQUESTS_PER_SECOND=10000000
+    network_mode: "host"
