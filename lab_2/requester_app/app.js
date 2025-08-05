@@ -33,5 +33,5 @@ const sendRequest = async () => {
     }
 };
 
-// Inicia o loop infinito que chama a função sendRequest na frequência definida
+/* Inicia o loop infinito que chama a função sendRequest na frequência definida*/
 setInterval(sendRequest, interval);
